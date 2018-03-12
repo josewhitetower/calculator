@@ -70,6 +70,9 @@ export default {
     },
     clearDisplay() {
       this.displayValue = '0';
+      this.value = null;
+      this.waitingForOperand = false;
+      this.operator = null;
     },
     toggleSign() {
       this.displayValue = this.displayValue.startsWith('-') ? this.displayValue.substr(1) : `-${this.displayValue}`;
